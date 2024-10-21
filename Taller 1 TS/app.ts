@@ -1,28 +1,6 @@
-/* import { series } from './data';
-
-const seriesTable = document.getElementById('seriesTable');
-
-
-series.forEach((serie) => {
-  const row = document.createElement('tr');
-  row.innerHTML = `
-    <th scope="row">${serie.id}</th>
-    <td>${serie.nombre}</td>
-    <td>${serie.canal}</td>
-    <td>${serie.temporada}</td>
-    <td>
-      <img src="${serie.imagen}" alt="${serie.nombre}" style="width: 100px;">
-    </td>
-    <td>
-      <a href="${serie.link}" target="_blank">More Info</a>
-    </td>
-  `;
-  seriesTable?.appendChild(row);
-});
- */
 import { series } from './data';
 
-const table:HTMLTableElement = document.getElementById('TableBody') as HTMLTableElement;
+const table:HTMLTableElement = document.getElementById('seriesTable') as HTMLTableElement;
 
 let promedio = (series.reduce((acc, serie) => acc + serie.temporada, 0) / series.length);
 
