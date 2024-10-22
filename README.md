@@ -44,10 +44,6 @@
 
 - [Documentación de Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
-## 🎉 Conclusión
-
-Este taller te permitirá adentrarte en el desarrollo de aplicaciones con TypeScript y aprenderás a gestionar datos de manera efectiva. ¡Buena suerte y diviértete programando! 🌟
-
 ## 📦 Instalación
 
 1. Clona este repositorio:
