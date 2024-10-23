@@ -13,7 +13,7 @@
      - **Atributos**: `id`, `nombre`, `canal`, `temporada` (20%) ✅
 
 2. **Archivo de datos `data.ts`**:
-   - Crea un archivo llamado `data.ts` que contenga un conjunto de datos de series. Puedes basarte en el contenido disponible en el siguiente enlace: [Series Data](https://gist.githubusercontent.com/josejbocanegra/de7431ea04351128053335c8/68c9698c/raw/add0c3cad73b7f913de44ee02b9ca7ebd1ebea23/series.ts) (20%). ✅
+   - Crea un archivo llamado `data.ts` que contenga un conjunto de datos de series. Puedes basarte en el contenido disponible en el siguiente enlace: [Series Data](https://gist.githubusercontent.com/josejbocanegra/de7431ea04351128053335c868c9698c/raw/add0c3cad73b7f913de44ee02b9ca7ebd1ebea23/series.ts) (20%). ✅
 
 3. **Mostrar el listado de series**:
    - Implementa una tabla para mostrar el listado de series utilizando Bootstrap. La tabla debe mostrar los siguientes datos de cada serie:
@@ -21,7 +21,7 @@
      - `nombre`
      - `canal`
      - `temporada` (25%).
-   - Consulta la documentación de Bootstrap para tablas: [Bootstrap Tables](https://getbootstrap.com/docs/4.0/content/tables/).
+   - Consulta la documentación de Bootstrap para tablas: [Bootstrap Tables](https://getbootstrap.com/docs/4.0/content/tables/#striped-rows).
 
 #### Punto No. 2 (35%)
 
