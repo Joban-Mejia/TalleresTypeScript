@@ -1,38 +1,38 @@
-/* import { series } from './data';
+import { series } from './data.js';
 
-const seriesTable = document.getElementById('seriesTable');
+const table: HTMLTableElement = document.getElementById('seriesTable') as HTMLTableElement;
+const cardTitle: HTMLElement = document.querySelector('.card-title') as HTMLElement;
+const cardText: HTMLElement = document.querySelector('.card-text') as HTMLElement;
+const cardLink: HTMLAnchorElement = document.querySelector('.btn') as HTMLAnchorElement;
+const cardImage: HTMLImageElement = document.querySelector('.card-img-top') as HTMLImageElement;
 
+// Calculamos el promedio de temporadas
+const promedio: number = series.reduce((acc, serie) => acc + serie.temporada, 0) / series.length;
 
+// Renderizamos las series en la tabla
 series.forEach((serie) => {
-  const row = document.createElement('tr');
-  row.innerHTML = `
-    <th scope="row">${serie.id}</th>
-    <td>${serie.nombre}</td>
-    <td>${serie.canal}</td>
-    <td>${serie.temporada}</td>
-    <td>
-      <img src="${serie.imagen}" alt="${serie.nombre}" style="width: 100px;">
-    </td>
-    <td>
-      <a href="${serie.link}" target="_blank">More Info</a>
-    </td>
-  `;
-  seriesTable?.appendChild(row);
-});
- */
-import { series } from './data';
+    const fila: HTMLTableRowElement = table.insertRow();
+    fila.innerHTML = `<td>${serie.id}</td>
+                    <td class="pointer-name">${serie.nombre}</td>
+                    <td>${serie.canal}</td>
+                    <td>${serie.temporada}</td>`;
 
-const table:HTMLTableElement = document.getElementById('TableBody') as HTMLTableElement;
-
-let promedio = (series.reduce((acc, serie) => acc + serie.temporada, 0) / series.length);
-
-series.forEach(series => {
-    const row:HTMLTableRowElement = table.insertRow();
-    row.innerHTML = `<td>${series.id}</td>
-                     <td>${series.nombre}</td>
-                    <td>${series.canal}</td>
-                     <td>${series.temporada}</td>`;
+    const nombreSerie = fila.querySelector('.pointer-name');
+    nombreSerie?.addEventListener('click', function() {
+        mostrarDetalles(serie);
+    });
 });
 
-const row:HTMLTableRowElement = table.insertRow();
-row.innerHTML = `<td colspan="2">Promedio de temporadas: ${promedio}</td>`;
+// Mostrar el promedio de temporadas en la última fila
+const filaPromedio: HTMLTableRowElement = table.insertRow();
+filaPromedio.innerHTML = `<td colspan="4">Promedio de temporadas: ${promedio}</td>`;
+
+// Definimos el tipo de la función mostrarDetalles
+function mostrarDetalles(serie: { id: number, nombre: string, canal: string, temporada: number, descripcion: string, link: string, imagen: string }): void {
+    cardTitle.textContent = serie.nombre;
+    cardText.textContent = serie.descripcion;
+    cardLink.href = serie.link;
+    cardLink.textContent = "Mirala Aquí";
+    cardLink.target = "_blank";
+    cardImage.src = serie.imagen;
+}

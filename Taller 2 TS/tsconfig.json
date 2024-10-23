@@ -1,13 +1,11 @@
 {
-    "compilerOptions": {
-      "module": "system",           /* Mantiene el módulo SystemJS si lo necesitas. */
-      "target": "ESNext",           /* Sigue generando código compatible con las últimas versiones de ECMAScript. */
-      "outFile": "app.js",  /* Exporta todo en un único archivo index.js*/
-      "strict": true,               /* Mantén la verificación estricta de tipos. */
-      "esModuleInterop": true,      /* Interoperabilidad con módulos CommonJS. */
-      "skipLibCheck": true,         /* Omite la verificación de tipos en bibliotecas para mejorar la compilación. */
-      "forceConsistentCasingInFileNames": true /* Asegura un uso consistente de mayúsculas y minúsculas en nombres de archivos. */
-    },
-    //"include": ["src/**/*"],        /* Incluye todos los archivos TypeScript en la carpeta `src`. */
-    "exclude": ["node_modules"]     /* Excluye la carpeta `node_modules` para evitar compilaciones innecesarias. */
+  "compilerOptions": {
+    "module": "ES2015",                               /* Specify what module code is generated. */
+    "target": "ES5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "rootDir": "./",                                  /* Specify the root folder within your source files. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,
+    "skipLibCheck": true
+  }
 }
